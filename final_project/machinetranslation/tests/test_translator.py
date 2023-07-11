@@ -7,10 +7,13 @@ class TranslationTestCase(unittest.TestCase):
         self.assertEqual(english_to_french("Hi"), "Bonjour")
         self.assertEqual(english_to_french("Home"), "Accueil")
         self.assertNotEqual(english_to_french("mismatch"), "déviation")
+        self.assertNotEqual(english_to_french("tower"), "tour")
 
     def test_french_to_english(self):
         self.assertEqual(french_to_english("Bonjour"), "Hello")
         self.assertEqual(french_to_english("Accueil"), "Home")
+        self.assertNotEqual(english_to_french("déviation"), "drift")
+        self.assertNotEqual(english_to_french("la tour"), "round")
 
 
 if __name__ == '__main__':
